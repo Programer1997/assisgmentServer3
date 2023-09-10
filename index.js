@@ -2,30 +2,28 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
+
 const port = 3000;
 
 const {router} = require('./routes/index.js');
+//console.log(router);
 
-//Set EJS as the view emgine
+//Set EJS as the view engine
 app.set('view engine', 'ejs');
-
 app.use(express.static(__dirname + './public'));
-
 app.set('views',path.join(__dirname, 'views'));
 
 
 //middleware
-app.use(express.json());
+app.use(express.urlencoded());
 app.use('/',router);
 
-
-/*
-app.get('/',(req,res)=>{
-    res.send('listening from server jajaj');
-
+//example to understand very well
+app.get('/house',(req,res)=>{
+    res.sendFile(path.join(__dirname + `/./views/house.html`));
 });
-*/
 
+//Application listening configuration
 app.listen(port,()=>{
     console.log(`server is listening on port ${port}`);
 });

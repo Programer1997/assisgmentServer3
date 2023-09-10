@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+    </header>
+    <main>
+        <h1>Register page</h1>
+        <form method="post" action="/register">
+            <label for="authentication-email-id" >Email  : </label>
+            <input type="text" placeholder="example@example.com" id="authentication-email-id" name="email">
+            <label for="authentication-password-id">Password : </label>
+            <input type="password" placeholder="8 characters +" id="authentication-password-id" name="password">
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    
+</body>
+</html>

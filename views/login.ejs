@@ -6,11 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <button>Submit</button>
+    <header>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+    </header>
+    <h1>Login Page</h1>
+    <form action="/login" method="post">
+        <input type="text" placeholder="put your email : example@gmail.com" name="email">
+        <input type="password" placeholder="write your password" name="password">
+        
+        <button type="submit">Log in</button>
     </form>
     
 </body>
