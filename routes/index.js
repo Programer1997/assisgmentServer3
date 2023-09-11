@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-import bcrypt from 'bcrypt';
+//import bcrypt from 'bcrypt';
 //const {Router}  = require('express');  ESTE ES lo mismo que lo de arriba solo que usando DESESTRUCTURACION
 //const router  = Router();   LINEA 1 Y 2 === LINEA 4 Y 5
 
@@ -35,7 +35,7 @@ router.get('/', (req, res) => {
     users.push(newUser);
     console.log(users);
 
-    bcrypt(password); // im working on this rigth now 
+    //bcrypt(password); // im working on this rigth now 
 
     //res.send(`your email : ${email} and your password :  ${password} have been save sucessfully`)
     res.redirect('/login');
@@ -72,12 +72,6 @@ router.get('/', (req, res) => {
   module.exports={router};
 
 
-  function bcrypt (password){
-    const saltRound = 10;
-    const passwordFunction = password;
   
-  bcrypt.hash(passwordFunction,saltRound,()=>{
 
-  });
-
-  }
+  
