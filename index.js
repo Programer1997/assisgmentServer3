@@ -8,10 +8,14 @@ const port = 3000;
 const {router} = require('./routes/index.js');
 //console.log(router);
 
+
+
 //Set EJS as the view engine
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + './public'));
+app.use(express.static(path.join(__dirname, 'public'))); 
 app.set('views',path.join(__dirname, 'views'));
+
+console.log(path.join(__dirname, 'public')); //just Testing
 
 
 //middleware
